@@ -1,4 +1,4 @@
-Seesion1--->
+# Seesion1--->
 1. var, let and const keyword
 2. DataTypes in js
 3. Operators
@@ -8,12 +8,12 @@ Seesion1--->
 7. Array 1D
 8. Spread Operator (...var_name)
 
-Session2--->
+# Session2--->
 1. Array 1D (Some Que & Sorting Concept) -DONE
 2. Array 2D (Declaration, Initializing & Accessing elements) -DONE
 3. StringManipulation & Methods (ASCII values) -DONE
 
-Session3--->
+# Session3--->
 01. Functions (Definition, Types, UseCases, HOF-Higher Order Functions)
 02. Scopes, Exception Context, call Stack, stack overflow
 03. Rest & arguments Operator (UseCase in Functions).
@@ -26,7 +26,7 @@ Session3--->
 10. Object and Array Destructuring.
 11. how internal javascript works. (MemoryCreation Phase and Code Execution Phase)
 
-Session4--->
+# Session4--->
 01. DOM & some Methods of DOM
     a. What is DOM
     b. alert(), prompt() and confirm(). (Dialog-Boxes)
@@ -39,12 +39,12 @@ Session4--->
 02. JSON - (Definition, Data Parsing, Accessing JSON, Practice Questions)
 
 
-Session5--->
+# Session5--->
 01. sync & async JS
 02. setTimeout(), setInterval(), clearInterval() -async Methods
 02. Event Loop.
 
-Session6--->
+# Session6--->
 01. AJAX
 02. callbacks and callbackHell (sync & async both)
 03. Promises 
@@ -52,29 +52,29 @@ Session6--->
 05. fetch()
 06. Exception Handling (try catch)
     
-Session7---> Promise-APIs
+# Session7---> Promise-APIs
 01. Promise.all()
 02. Promise.allSettle()
 03. Promise.race()
 04. Promise.any()
 
-Session8---> Fetch CRUD operations
+# Session8---> Fetch CRUD operations
 01. Concept of Fetch API (GET, POST, PUT, DELETE) 
 02. Build our own fetch() method using ajax and Promise
 
-Session9---> Everything about this keyword
+# Session9---> Everything about this keyword
 01. behavior inside global scope
 02. behavior inside Function scope
 03. behavior inside Object Methods
 04. this binding - call(), apply() & bind()
 05. This keyword with arrow functions
 
-Session10---> ES6 Modules
+# Session10---> ES6 Modules
 01. import & export
 02. default export & import
 03. import multiple things & Module scope
 
-Session11---> OOPS Concepts
+# Session11---> OOPS Concepts
 00. Theory (Abstration, Inheritance, Polymorphism, Encapsulation)
 01. Factory Function
 02. __proto__ and prototype
@@ -85,11 +85,10 @@ Session11---> OOPS Concepts
 07. public & private properties inside classes 
 08. getters and setters inside classes. 
 
-Session12---> Advance Topic - Pending
+# Session12---> Advance Topic - Pending
 01. currying
 02. debouncing
 03. memoization
 04. throttling
-05. 
 
-Session13---> Interview Practice Question (technical)
+# Session13---> Interview Practice Question (technical)
