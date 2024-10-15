@@ -1,0 +1,64 @@
+<!-- Que- WAP to print perfect numbers between 1 - 1000 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse array</title>
+    <style>
+        body {
+            font-size: 32px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            background-color: #F2F4F4;
+        }
+
+        #output {
+            width: 95%;
+            /* height: 900px; */
+            margin: auto;
+            margin-bottom: 40px;
+            padding: 10px;
+            border-radius: 10px;
+            border: 0px;
+            box-shadow: 5px 5px 20px rgba(130, 129, 129, 0.54);
+            box-shadow: inset -10px, -10px, 20px, rgba(255, 255, 255, 0.487);
+            /* justify-content: center; */
+            /* text-wrap: wrap; */
+            /* display: flex;
+            flex-wrap: wrap; */
+        }
+        .outer{
+            margin: auto;   
+            width: 97%;
+            padding: 10px;
+            border: 0px;
+            border-radius: 10px;
+            box-shadow: 10px 10px 20px rgba(130, 129, 129, 0.54);
+            box-shadow: inset -10px, -10px, 20px, rgba(255, 255, 255, 0.487);
+        }
+
+    </style>
+</head>
+
+<body>
+    <h3>Q.16 WAP reverse elements in given array using "for in loop"</h3><br>
+    <div class="outer">
+        <h3 style="margin: 10px;">Output</h3>
+        <div id="output">
+            <script>                
+                let arr = [45,20,26,85,78,96,75,54]
+                document.write("Given Array is = <b>["+arr+"]</b><br><br>");
+                for(let i in arr){
+                    if(i<arr.length/2){
+                        let temp = arr[i];
+                        arr[i] = arr[(arr.length-1)-i];
+                        arr[(arr.length-1)-i]=temp;
+                    }
+                }
+                document.write("Reversed Array is = <b>["+arr+"]</b>");
+            </script>
+        </div>
+    </div>
+</body>
+</html>

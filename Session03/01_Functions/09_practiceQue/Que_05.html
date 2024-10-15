@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Que_05</title>
+    <style>
+        body {
+            font-size: 30px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Que - 5  Create a function that accept two Int arrays and return sum of all elements of both arrays</h2>
+    <script>
+        document.write("<h3>(i) Function with argument and return type</h3>")
+        function sum_Array(arr,arr_alt) {
+            let sum = 0;
+            document.write("<h3>***Arrays merged by spread operator {New_Array = (...arr_name)}</h3>")
+            let result_array = [...arr,...arr_alt];
+            for (let i = 0 ; i<result_array.length ; i++){
+                sum += result_array[i];
+            }
+            return sum;
+        }
+        let Array = [1,2,3,4,5,6,7,8,9];
+        let Array_alt = [10,20,30,40,50];
+        let sumOfArray = sum_Array(Array,Array_alt);
+        document.write("<h3>Ans : Sum of Arrays ["+Array+"] and ["+Array_alt+"] is : " +sumOfArray+ "</h3><hr>");
+        //=============================================================================================
+
+        document.write("<br><h3>(ii) Anonymous Function</h3>")
+        let sum_Array1 = function (arr,arr_alt) {
+            let sum = 0;
+            document.write("<h3>***Arrays merged by concate method {New_Array = arr1.concat(arr2)}</h3>")
+            let result_array = arr.concat(arr_alt);
+            for (let index in result_array){
+                sum += result_array[index];
+            }
+            return sum;
+        }
+        let Array1 = [1,2,3,4,8,9];
+        let Array_alt1 = [10,200,300,40,50];
+        let sumOfArray1 = sum_Array1(Array1,Array_alt1);
+        document.write("<h3>Ans : Sum of Arrays ["+Array1+"] and ["+Array_alt1+"] is : " +sumOfArray1+ "</h3><hr>");
+        //============================================================================================
+
+        document.write("<h3>(iii) Arrow => Function</h3>")
+        let sum_Array2 = (arr,arr_alt) => {
+            let sum = 0;
+            document.write("<h3>***Arrays merged by concate method {New_Array = arr1.concat(arr2)}</h3>")
+            let result_array = arr.concat(arr_alt);
+            for (let elements of result_array){
+                sum += elements;
+            }
+            return sum;
+        }
+        let Array2 = [1,2,3,4,8,9];
+        let Array_alt2 = [10,200,300,800,649];
+        let sumOfArray2 = sum_Array2(Array2,Array_alt2);
+        document.write("<h3>Ans : Sum of Arrays ["+Array2+"] and ["+Array_alt2+"] is : " +sumOfArray2+ "</h3><hr>");
+
+        
+
+    </script>
+</body>
+
+</html>

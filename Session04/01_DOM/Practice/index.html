@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="myNewDiv">
+        <h1>WelCome To this DOM.</h1>
+        <p>Hi I am Surendra Jatav</p>
+        <ul>
+            <li>Surendra</li>
+            <li>Jitendra</li>
+            <li>Govind</li>
+            <li>Kaushal</li>
+        </ul>
+    </div>
+    <script>
+        console.dir(document) // Whole documents
+        console.dir(document.head)
+        console.dir(document.body)
+
+        // Accessing Root Node
+        console.log(document.documentElement)
+        console.log(document.head)
+        console.log(document.body)
+
+        // Accessing Children
+        console.log(document.body.childNodes)
+        console.log(document.body.children) //NOTE: returns HTMLCollection looks like an Array but it's note an Array it's a Object.
+
+        //All Nodes from body-->
+        for(node of  document.body.children){
+            console.log(node);
+        }
+
+        // we can convert this HTMLCollection Object into an Array using Array.from() method
+        let arrayFromBody = Array.from(document.body.children);
+        console.log("Array From Body",arrayFromBody);
+
+
+        // Access particular Element from body
+        console.log(document.body.firstElementChild)
+        console.log(document.body.lastElementChild)
+
+
+        // How to access Siblings->
+        const ulTag = arrayFromBody[2]
+        console.log(ulTag.children) // All siblings
+        console.log(ulTag.children[1]) // particular sibling
+        console.log(ulTag.children[1].textContent) // text Content
+
+        //======================================
+
+    </script>
+</body>
+</html>

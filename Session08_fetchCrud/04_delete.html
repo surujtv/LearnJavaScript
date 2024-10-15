@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DELETE</title>
+  </head>
+  <body>
+    <h1>DELETE</h1>
+
+    <script>
+      const url = `http://videhjaiswal.pythonanywhere.com/customer/customer_api/customers/1706/`;
+
+      async function postData() {
+        try {
+          const configrations = {
+            method: "DELETE",
+            headers: {
+              "Content-Type": "application/json; charset=UTF-8;",
+            },
+          };
+
+          const response = await fetch(url, configrations);
+          console.log(response);
+          if (response.ok) {
+            //   const data = await response.json();
+            console.log(response);
+            alert("User Deleted");
+          } else {
+            alert("User data not deleted");
+          }
+        } catch (error) {
+            console.log(error);
+            
+        }
+      }
+
+      postData();
+    </script>
+  </body>
+</html>

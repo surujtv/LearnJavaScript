@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSON.stringify()</title>
+  </head>
+  <body>
+    <h1>JavaScript Object on browser=============></h1>
+    <div id="container"></div><br>
+    <h1>JSON String on browser=============></h1>
+    <div id="container1"></div>
+
+    <script>
+      let jsObj = {
+        name: "Surendra Jatav",
+        age: "23",
+        gender: "Male",
+        dob: "02/07/2001",
+      };
+
+      document.getElementById("container").innerHTML = "<h1>"+jsObj+"</h1>";   // output-> [object Object]
+
+      // now we use JSON.stringify() to show JSON string on browser.
+
+      let jsonObj = JSON.stringify(jsObj)
+      document.getElementById("container1").innerHTML = "<h1>"+jsonObj+"</h1>";
+
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PUT</title>
+  </head>
+  <body>
+    <h1>PUT</h1>
+
+    <script>
+      const url = `http://videhjaiswal.pythonanywhere.com/customer/customer_api/customers/1694/`;
+
+      async function postData() {
+        try {
+          const configrations = {
+            method: "PUT",
+            body: JSON.stringify({
+              name: "Sandhya",
+              email: "sandhyajii@gmail.com",
+              password: "151444",
+              gender: "Female",
+              balance: "16515",
+              account_no: "16515115",
+              accounttype: "savings",
+            }),
+            headers: {
+              "Content-Type": "application/json",
+            },
+          };
+
+          const response = await fetch(url, configrations);
+          if (response.ok) {
+            const data = await response.json();
+            console.log(data);
+            alert("User Updated");
+          } else {
+            alert("User data not registered");
+          }
+        } catch (error) {
+            console.log(error)
+        }
+      }
+
+      postData();
+    </script>
+  </body>
+</html>

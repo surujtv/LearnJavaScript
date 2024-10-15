@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>State_City</title>
+    <style>
+        body {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 40px;
+            padding-left: 20px;
+        }
+        ol,li {
+            font-size: 50px;
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Que-3 WAP to creat "JS_Object" to store Name of state and it's city >[Object of Array]</h2>
+    <div id="state">
+    </div>
+    <script>
+        let state = {
+            "Madhya Pradesh": ["Indore", "Ujjain", "Bhopal","Khandwa"],
+            "Uttar Pradesh": ["Prayagraj", "Agra", "Kanpur"],
+            "Maharshtra": ["Mumbai", "Nashik", "Pune"]
+        }
+        let tab = "<ol>"
+        for (const key in state) {
+            tab += "<b><li>" + key + "</li></b><ul type='disc'>";
+            for (const index in state[key]) {
+                tab += "<li style='font-size: 40px'><b>" + state[key][index] + "</b></li>";
+            }
+            tab += "</ul><hr><br>"
+        }
+        tab += "</ol>";
+        document.getElementById("state").innerHTML = tab;
+    </script>
+</body>
+
+</html>

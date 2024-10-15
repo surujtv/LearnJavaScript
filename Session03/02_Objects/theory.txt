@@ -1,0 +1,92 @@
+1. What is Objects in JS?
+
+Definition----->
+    Objects are non-primitive data structure in JS which is used to store bulk amount of heterogenous data in the form of key: 'Value' Pairs.
+
+    Properties---->
+    1. values can be any data type primitive & non-primitive (string,number, boolean, null, undefined, function, objects, Arrays, etc)
+    2. all key names must be random.
+    3. typeOf of keys are always a string
+
+    #Objects in JavaScript are a powerful tool that allows us to represent complex data structures and define behavior associated with that data. They are widely used in web development and can be found in various libraries and frameworks, such as React, Angular, and Vue.js.
+
+Another Theory------>
+    JSObject:It is a sequence which is used to store bulk amount of data in the form of key-value pair.
+    1.order: random
+    2.key: immutable(not changable),unique
+    3.value:mutable(changable)
+    4.access value using key name
+    5.key can be anything:string,number,boolean but type of key always a string
+        Syntax:
+        var obj_name = {
+            key:value,
+            key1:value,
+            .....
+            keyn:value
+        }
+
+===========================================================
+
+How to create JS-Object-->
+    a. Declaration
+    b. Properties(Details) and Actions(Function or Methods)
+-------------------------------
+
+Object of object (Object inside object)
+Object of Array (Array inside object)
+-------------------------------
+
+How to Access data from Object--->
+    a. dot notation--->
+        Syntax--> objName.keyName 
+    b. array notation--->
+        Syntax--> objName['keyName']
+-------------------------------
+
+Adding New property--->
+Syntax--> objName.newKeyName = value
+-------------------------------
+
+Update existing property.--->
+Syntax--> objName.existingKeyName = udatedValue
+-------------------------------
+
+delete any property using delet operator---> 
+Syntax--> delete obj_name.key
+-------------------------------
+
+use in operator to check value exist in object or not it returns boolean value--> 
+Syntax--> let result = 'property_name' in obj_name
+-------------------------------
+
+accessing all values using loops--->
+#NOTE-- while using loop always use array notation to acces object values 
+Syntax--> obj_name[key] | here key returns key Names of objects.
+-------------------------------
+
+Some predefined Methods--->
+
+Object.keys(Obj_name) --> returns array of keys from object
+Object.values(Obj_name) --> returns array of values from object
+Object.entries(Obj_name) --> returns array of [key,value] pairs from the Object
+Object.keys(obj_name).length --> returns length of the object.
+
+#this and new Keyword ---> use of these keywords.
+#getters and setters in JS -Objects.
+#ObjectConstructorFunction
+-------------------------------
+
+Destructuring -->
+Object destructuring is a useful JavaScript feature to extract properties from objects and bind them to variables. Even better, object destructuring can extract multiple properties in a single statement, can access properties from nested objects, and can set a default value if the property doesn't exist.
+Syntax - 
+    const {keyName1, keyName2} = {
+        keyName1 : value1,
+        keyName2 : value2
+    }
+
+-------------------------------
+
+some important topics -
+1. memory allocation of Objects
+2. Object.seal() & Object.freeze() Methods
+3. Object.assign(obj1, obj2) - to copy previous objects properties in new one 

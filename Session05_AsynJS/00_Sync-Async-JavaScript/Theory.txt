@@ -1,0 +1,12 @@
+1. Synchronous JavaScript (Blocking) -
+    
+    Synchronous(Blocking) means the code runs in a particular sequence of instructions given in the program. Each instruction waits for the previous instruction to complete its execution.
+
+2. Asynchronous JavaScript (Unblocking) - 
+
+    Asynchronous(UnBlocking) programming is an essential concept in JavaScript that allows your code to run in the background without blocking the execution of other code. asynchronous tasks handled by web APIs which is present in browser. 
+
+3. What is API - 
+
+    API stands for Application Programming Interface. It's a set of rules and protocols that allows software applications to communicate with each other to exchange data, features, and functionality over the internet. 
+

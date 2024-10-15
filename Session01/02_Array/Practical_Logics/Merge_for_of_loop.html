@@ -1,0 +1,70 @@
+<!-- Que- WAP to print perfect numbers between 1 - 1000 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merge array</title>
+    <style>
+    body {
+            font-size: 32px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            background-color: #F2F4F4;
+        }
+
+        #output {
+            width: 95%;
+            /* height: 900px; */
+            margin: auto;
+            margin-bottom: 40px;
+            padding: 10px;
+            border-radius: 10px;
+            border: 0px;
+            box-shadow: 5px 5px 20px rgba(130, 129, 129, 0.54);
+            box-shadow: inset -10px, -10px, 20px, rgba(255, 255, 255, 0.487);
+            /* justify-content: center; */
+            /* text-wrap: wrap; */
+            /* display: flex;
+            flex-wrap: wrap; */
+        }
+        .outer{
+            margin: auto;   
+            width: 97%;
+            padding: 10px;
+            border: 0px;
+            border-radius: 10px;
+            box-shadow: 10px 10px 20px rgba(130, 129, 129, 0.54);
+            box-shadow: inset -10px, -10px, 20px, rgba(255, 255, 255, 0.487);
+        }
+
+    </style>
+</head>
+
+<body>
+    <h3>Q.16 WAP to merge multiple arrays and return new array using "for of loop"</h3><br>
+    <div class="outer">
+        <h3 style="margin: 10px;">Output</h3>
+        <div id="output">
+            <script>                
+                let arr1 = [10,20,30,40]
+                let arr2 = [50,60,70,80]
+                let arr3 = ['surendra',50,null,true]
+                let arr4 = [];
+                for(let index of arr1)
+                    arr4[arr4.length] = index;
+                for(let index of arr2)
+                    arr4[arr4.length] = index;
+                for(let index of arr3)
+                    arr4[arr4.length] = index;
+                document.write("1st Existing Array is = <b>["+arr1+"]</b><br>");
+                document.write("2nd Existing Array is = <b>["+arr2+"]</b><br>");
+                document.write("3rd Existing Array is = <b>["+arr3+"]</b><br><br>");
+                document.write("New Merged Array is = <b>["+arr4+"]</b><br>");
+                document.write("Length of Merged Array = <b>"+arr4.length+"</b><br>");
+                document.write("Type of Merged Array is = <b>"+typeof arr4+"</b><br>");
+            </script>
+        </div>
+    </div>
+</body>
+</html>

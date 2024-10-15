@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GET</title>
+    <style>
+      table {
+        border: 1px solid black;
+        border-collapse: collapse;
+        justify-content: center;
+        margin: 20px;
+        width: 90%;
+      }
+      tr th {
+        padding: 8px;
+        border: 1px solid black;
+      }
+      td {
+        font-size: 16px;
+        border: 1px solid black;
+        text-align: center;
+      }
+      caption {
+        margin-bottom: 20px;
+        width: 18%;
+        text-align: center;
+      }
+      img {
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>GET DATA</h1>
+
+    <div
+      id="container"
+      style="
+        width: 100%;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+      "
+    ></div>
+
+    <script>
+      // const URL = "https://jsonplaceholder.typicode.com/posts"
+      const url ="https://videhjaiswal.pythonanywhere.com/customer/customer_api/customers/";
+
+      async function getData() {
+        try {
+          const response = await fetch(url);
+          const data = await response.json();
+          console.log(data); //array milega
+
+          var htmlCode = `<table>
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>name</th>
+                <th>gender</th>
+                <th>email</th>
+                <th>password</th>
+                <th>balance</th>
+                <th>account_no</th>
+                <th>accounttype</th>
+                <th>pub_date</th>
+            </tr>
+        </thead>`;
+
+          for (const object of data) {
+            htmlCode += `<tr>`;
+
+            htmlCode += `<td>${object.id}</td>`;
+            htmlCode += `<td>${object.name}</td>`;
+            htmlCode += `<td>${object.gender}</td>`;
+            htmlCode += `<td>${object.email}</td>`;
+            htmlCode += `<td>${object.password}</td>`;
+            htmlCode += `<td>${object.balance}</td>`;
+            htmlCode += `<td>${object.account_no}</td>`;
+            htmlCode += `<td>${object.accounttype}</td>`;
+            htmlCode += `<td>${object.pub_date}</td>`;
+
+            htmlCode += `</tr>`;
+          }
+
+          htmlCode += `</table>`;
+          document.getElementById("container").innerHTML = htmlCode;
+        } catch (error) {
+            console.log(error.message)
+        }
+      }
+
+      getData();
+    </script>
+  </body>
+</html>

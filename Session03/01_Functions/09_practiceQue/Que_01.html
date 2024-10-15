@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Que_01</title>
+    <style>
+        body{
+            font-size: 30px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Que - 1 create a function to print greater of two numbers passed in argument</h2>
+    <script>
+        document.write("<h3>(i) Function with argument</h3>")
+        function greater(a,b){
+            a==b ? document.write("<h3>Ans : Both Number are Equal</h3>") :  a>b ? document.write("<h3>Ans : "+a+" is Greatest</h3>") : document.write("<h3>Ans : "+b+" is Greatest</h3>");
+        }
+        greater(56,86);
+        //============================================================================
+
+        document.write("<hr><br><h3>(ii) Anonymous function</h3>")
+        let greater1 = function(a,b){
+            a==b ? document.write("<h3>Ans : Both Number are Equal</h3>") : a>b ? document.write("<h3>Ans : "+a+" is Greatest</h3>") : document.write("<h3>Ans : "+b+" is Greatest</h3>");
+        }
+        greater1(56,56);
+        //============================================================================
+
+        document.write("<hr><br><h3>(iii) Arrow => function</h3>")
+        let greater2 = (a,b) => a==b ? document.write("<h3>Ans : Both Number are Equal</h3>") : a>b ? document.write("<h3>Ans : "+a+" is Greatest</h3>") : document.write("<h3>Ans : "+b+" is Greatest</h3>");
+        greater2(36,15);
+    </script>
+</body>
+</html>

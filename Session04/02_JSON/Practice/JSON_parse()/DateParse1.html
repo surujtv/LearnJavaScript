@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Parse</title>
+</head>
+<body>
+    <div id="container">
+
+    </div>
+
+    <script>
+        let jsonObj = `{
+            "name": "Surendra Jatav",
+            "age": "23",
+            "gender": "Male",
+            "dob":"02/07/2001"
+        }`
+
+        //parsing JSON data to JavaScript Object-->
+        let person = JSON.parse(jsonObj, function(key, value){
+            if (key === 'dob'){
+                return new Date(value);  //returning date object from string
+            } else {
+                return value;   //returning the normal values as it is
+            }
+        })
+
+        data = `<h1>Name: ${person.name}</h1><h1>Age: ${person.age}</h1><h1>Gender: ${person.gender}</h1><h1>DOB: ${person.dob}</h1>`
+
+        // document.getElementById("container").innerHTML = jsonObj
+        document.getElementById("container").innerHTML = data
+
+    </script>
+</body>
+</html>

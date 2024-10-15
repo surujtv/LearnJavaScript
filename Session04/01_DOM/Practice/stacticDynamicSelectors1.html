@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StaticDynamic</title>
+</head>
+<body>
+    <h1>Difference between querySelector and getElementBy*</h1>
+
+    <div class="allDiv"><h1>First Div</h1></div>
+
+    <script>
+        const allDiv = document.getElementsByClassName('allDiv') 
+        console.log(allDiv)
+        console.log(allDiv[1]) // undefined
+    </script>
+
+    <div class="allDiv"><h1>Second Div</h1></div>
+
+    <script>
+        console.log(allDiv)
+        console.log(allDiv[1])
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ObjectJSON</title>
+  </head>
+  <body>
+    <h1>Accessing JSON Data in JavaScript using loop</h1>
+    <div id="container"></div>
+
+    <script>
+      let JSdata = `{ 
+            "name": "Surendra Jatav",
+            "age": "23",
+            "gender": "Male",
+            "skills": ["C", "C++", "HTML", "CSS", "JavaScript"],
+            "address": {
+                "add": "61, Shivbag Colony",
+                "city": "Indore",
+                "state": "Madhya Pradesh",
+                "pincode": 452010,
+                "latlong": {
+                    "lat": "13211",
+                    "long": "78912"
+                }
+            },
+            "comment":"This is a sample JSON object."
+        }`;
+
+      // converting json string into js object-
+      let jsObject = JSON.parse(JSdata);
+      let output = "";
+      for (let objData in jsObject) {
+        // output += `<h1>Name: ${objData.name}</h1>` // dot notation won't work here-
+        if (objData == "address") {
+          output += `<h1>Address Information:- <h1>`;
+          for (let addressKeys in jsObject[objData]) {
+            if (addressKeys == "latlong") {
+              output += `<h1>${addressKeys} : Latitude - ${jsObject["address"]["latlong"]["lat"]}, Longitude - ${jsObject["address"]["latlong"]["long"]}</h1>`;
+            } else {
+              output += `<h1>${addressKeys} : ${jsObject[objData][addressKeys]}</h1>`;
+            }
+          }
+        } else {
+          output += `<h1>${objData} : ${jsObject[objData]}</h1><hr>`;
+        }
+      }
+
+      document.getElementById("container").innerHTML = output;
+    </script>
+  </body>
+</html>

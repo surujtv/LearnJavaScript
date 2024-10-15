@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket_Team</title>
+    <style>
+        body {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 40px;
+            padding-left: 20px;
+        }
+        table,tr,td {
+            border-bottom: 1px solid black;
+            border-collapse: collapse;
+            width: 18%;
+            padding: 5px;
+        }
+        ol,li {
+            font-size: 50px;
+            padding-top: 10px;
+        }
+
+        .detail {
+            font-size: 35px;
+            text-align: end;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Que-2 WAP to creat "JS_Object" to store Name of cricket teams according to world ranking >[Object of Object]</h2>
+    <div id="team"></div>
+    <script>
+        let team_Details = {
+            INDIA: {
+                Rank: 1,
+                Matches: 55,
+                Points: '6,640',
+                Rating: 121
+            },
+            AUSTRALIA: {
+                Rank: 2,
+                Matches: 42,
+                Points: '4,926',
+                Rating: 117
+            },
+            'SOUTH AFRICA': {
+                Rank: 3,
+                Matches: 34,
+                Points: '3,750',
+                Rating: 110
+            },
+            PAKISTAN: {
+                Rank: 4,
+                Matches: 36,
+                Points: '3,922',
+                Rating: 109
+            },
+            "NEW ZEALAND": {
+                Rank: 5,
+                Matches: 43,
+                Points: '4,399',
+                Rating: 102
+            }
+        }
+        // console.log(Course_Details);
+        let tab = "<ol>"
+        for (const key in team_Details) {
+            tab += "<b><li>Team Name : \"" + key + "\"</li></b><ul type='disc'><table>";
+            for (const subKey in team_Details[key]) {
+                tab += "<tr><td><li style='font-size: 35px'>" + subKey + "</td><td class='detail'><b>" + team_Details[key][subKey] + "</b></li></td><tr>";
+            }
+            tab += "</table></ul><hr><br>"
+        }
+        tab += "</ol>";
+        document.getElementById("team").innerHTML = tab;
+    </script>
+</body>
+
+</html>

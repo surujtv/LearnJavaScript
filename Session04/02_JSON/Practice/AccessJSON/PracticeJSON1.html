@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSON DATA PARCING</title>
+  </head>
+  <body>
+    <h1>Let's Deal with real JSON</h1>
+    <hr>
+    <div class="DataContainer"></div>
+
+    <script>
+        const jsonData = [
+        {
+          id: "0001",
+          type: "donut",
+          name: "Cake",
+          ppu: 0.55,
+          batters: {
+            batter: [
+              {
+                id: "1001",
+                type: "Regular",
+              },
+              {
+                id: "1002",
+                type: "Chocolate",
+              },
+              {
+                id: "1003",
+                type: "Blueberry",
+              },
+              {
+                id: "1004",
+                type: "Devil's Food",
+              },
+            ],
+          },
+          topping: [
+            {
+              id: "5001",
+              type: "None",
+            },
+            {
+              id: "5002",
+              type: "Glazed",
+            },
+            {
+              id: "5005",
+              type: "Sugar",
+            },
+            {
+              id: "5007",
+              type: "Powdered Sugar",
+            },
+            {
+              id: "5006",
+              type: "Chocolate with Sprinkles",
+            },
+            {
+              id: "5003",
+              type: "Chocolate",
+            },
+            {
+              id: "5004",
+              type: "Maple",
+            },
+          ],
+        },
+        {
+          id: "0002",
+          type: "donut",
+          name: "Raised",
+          ppu: 0.55,
+          batters: {
+            batter: [
+              {
+                id: "1001",
+                type: "Regular",
+              },
+            ],
+          },
+          topping: [
+            {
+              id: "5001",
+              type: "None",
+            },
+            {
+              id: "5002",
+              type: "Glazed",
+            },
+            {
+              id: "5005",
+              type: "Sugar",
+            },
+            {
+              id: "5003",
+              type: "Chocolate",
+            },
+            {
+              id: "5004",
+              type: "Maple",
+            },
+          ],
+        },
+        {
+          id: "0003",
+          type: "donut",
+          name: "Old Fashioned",
+          ppu: 0.55,
+          batters: {
+            batter: [
+              {
+                id: "1001",
+                type: "Regular",
+              },
+              {
+                id: "1002",
+                type: "Chocolate",
+              },
+            ],
+          },
+          topping: [
+            {
+              id: "5001",
+              type: "None",
+            },
+            {
+              id: "5002",
+              type: "Glazed",
+            },
+            {
+              id: "5003",
+              type: "Chocolate",
+            },
+            {
+              id: "5004",
+              type: "Maple",
+            },
+          ],
+        },
+      ];
+    
+        // let's access outside array first 
+        
+        let htmlCode = ''
+
+        for(let objects of jsonData){
+
+            htmlCode += `<h2>id : ${objects.id}</h2>`
+            htmlCode += `<h2>type : ${objects.type}</h2>`
+            htmlCode += `<h2>name : ${objects.name}</h2>`
+            htmlCode += `<h2>ppu : ${objects.ppu}</h2>`
+
+            // console.log(objects.batters.batter)  // getting Arrays
+
+            htmlCode += `<h2>Batter is made with following ingredients: <br/><h2>`
+
+            for(let batterObjects of objects.batters.batter){   
+                // iterating 4 times for only first object 
+
+                htmlCode += `<h3>id : ${batterObjects.id}</h3>`
+                htmlCode += `<h3>Type : ${batterObjects.type}</h3>`
+
+            }
+
+            htmlCode += `<h2>Topping is made with following ingredients: <br/><h2>`
+
+            for(let toppingObjects of objects.topping){
+                
+                htmlCode += `<h3>id : ${toppingObjects.id}</h3>`
+                htmlCode += `<h3>Type : ${toppingObjects.type}</h3>`
+
+            }
+
+            htmlCode += `<hr>`
+        }
+
+        document.querySelector('.DataContainer').innerHTML = htmlCode
+
+        
+    </script>
+  </body>
+</html>

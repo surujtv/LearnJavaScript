@@ -1,0 +1,84 @@
+
+    Definition. -->
+    Functions are separated block of code that is used to saperate particular code or logic that is required many times while we writing any program.
+    They are executed when they are invoked.
+
+    Another Definition-->
+    Function: It is a self contained block of statement which is used to perform a particular task.
+    It main purpose is to reduce code.
+    Syntax:
+    function func_name(arguments)
+    {
+        return data
+    }
+    
+    --------------------------------------------------
+
+    Advantages-->
+    Code Reusability: Functions allow you to write reusable code, reducing code duplication and improving code maintainability.
+
+    Asynchronous Processing: JavaScript is a single-threaded language, which means it can only execute one command at a time. Functions enable asynchronous processing by allowing you to run JavaScript code in parallel using Promises, async/await, or callbacks.
+    --------------------------------------------------
+    #Types of Functions--->
+    1. Normal function (Three types) Function Declaration -----> 
+        On the basis of return type and arguments function are classified as:
+        
+        a. Function without return type and without argument--->
+            Syntax-->
+            function fun_name (){
+                //code here
+            }
+
+        b. Function without return type with argument--->
+            Syntax-->
+            function fun_name (arg1, arg2){
+                console.log(arg1, arg2)
+            }
+
+        c. Function with return type without argument--->
+            Syntax-->
+            function fun_name (){
+                return 'any msg or code';
+            }
+
+        d. Function with return type and with argument-->
+            Syntax-->
+            function fun_name(arg1, arg2){
+                let sum = arg1 + arg2;
+                return sum;
+            }
+
+    -----------------------------------------------------------------
+
+    2. Anonymous Function (function expression) --> No need function name
+    
+        Syntax-->   
+        let var_name = function (){
+            //code here
+        }
+        
+    -----------------------------------------------------------------
+
+    3. Arrow Function --> no need function name and function keyword
+        Syntax-->
+        let var_name = (args)=>{
+            //code here
+        }
+    
+    ----------------------------------------------------------------
+
+Some Other Topics based on Functions-->
+Rest & argument Operator (UseCase in Functions).--Done
+HOF(Higher Order of Function) & HOM(Higher Order of Method).-- Done
+IIFE (Immediate Invoked Funcion Expression) - Syntax--> (any_function)();-- Done
+Hoisting in JS.
+
+NOTE: 
+return Keyword must be used at the end of the code because return keyword working as a break keyword.
+Code which is written after return keyword won't Execute.
+
+Function Declaration - 
+When we declare a function using function keyword then it gets hoisted to top of the page i.e., It can be accessed before its declaration.
+
+Function Expression - 
+When we assign a function to a variable it's called a Function Expression for Example - anonymous function and Arrow function.

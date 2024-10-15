@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Que_03</title>
+    <style>
+        body {
+            font-size: 30px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Que - 3 create a function to calculate and return factorial of a number passed in argument</h2>
+    <script>
+        document.write("<h3>(i) Function with argument and return type</h3>")
+        function factorial(a) {
+            let fact = 1; 
+            for (let i = a ; i>1 ; i--)
+                fact *= i;
+            return fact;
+        }
+        let fact_num = 6;
+        let fact_result = factorial(fact_num);
+        document.write("<h3>Ans : Factorial of "+fact_num+" is : " +fact_result+ "</h3><hr>");
+        //=============================================================================================
+
+        document.write("<h3>(ii) Anonymous Function</h3>")
+        let factorial1 = function (a) {
+            let fact = 1; 
+            for (let i = a ; i>1 ; i--)
+                fact *= i;
+            return fact;
+        }
+        let fact_num1 = 5;
+        let fact_result1 = factorial1(fact_num1);
+        document.write("<h3>Ans : Factorial of "+fact_num1+" is : " +fact_result1+ "</h3><hr>");
+        //============================================================================================
+
+        document.write("<h3>(iii) Arrow => Function</h3>")
+        let factorial2 = (a) => {
+            let fact = 1; 
+            for (let i = a ; i>1 ; i--)
+                fact *= i;
+            return fact;
+        }
+        let fact_num2 = 7;
+        let fact_result2 = factorial2(fact_num2);
+        document.write("<h3>Ans : Factorial of "+fact_num2+" is : " +fact_result2+ "</h3><hr>");
+
+        
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course_Details</title>
+    <style>
+        body {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 30px;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Que-1 WAP to creat "JS_Object" to store course name and duration</h2>
+    <div id="course">
+
+    </div> 
+    <script>
+        let Course_Details = {
+            JavaScript: `1 Month's`,
+            C_Language: `1.5 Month's`,
+            "C++_Language": `2 Month's`,
+            Python: `3 Month's`,
+            Core_JAVA: `2 Month's`
+        }
+        // console.log(Course_Details);
+        let data = "<ol>"
+        for (const key in Course_Details) {
+            data += "<li>Course_Name : <b>" + key + "</b><br>Duration : <b>" + Course_Details[key] + "</b></li><br>";
+        }
+        data += "</ol>";
+        // document.querySelector("#course").innerHTML = data;  // working like CSS selecter
+        document.getElementById("course").innerHTML = data;
+    </script>
+</body>
+
+</html>

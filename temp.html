@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+
+    #div1 {
+        height: 800px;
+        width: 80%;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #div2 {
+        height: 80%;
+        width: 80%;
+        background-color: blanchedalmond;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #div3 {
+        height: 80%;
+        width: 80%;
+        background-color: aqua;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #div4 {
+        height: 80%;
+        width: 80%;
+        background-color: blue;
+        text-align: center;
+        align-items: center;
+    }
+    #btn {
+        margin-top: 50px;
+    }
+
+    </style>
+  </head>
+  <body>
+    <div id="div1">
+      <div id="div2">
+        <div id="div3">
+          <div id="div4">
+            <button id="btn">Click</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.getElementById("div1").addEventListener("click", (event) => {
+        // console.log(event.target)
+        console.log('clicked div - 1')
+      }, true);
+      document.getElementById("div2").addEventListener("click", (event) => {
+        // console.log(event.target)
+        console.log('clicked div - 2')
+      }, true);
+      document.getElementById("div3").addEventListener("click", (event) => {
+        // console.log(event.target)
+        console.log('clicked div - 3')
+      }, true);
+      document.getElementById("div4").addEventListener("click", (event) => {
+        // console.log(event.target)
+        console.log('clicked div - 4')
+      }, true);
+      document.getElementById("btn").addEventListener("click", (event) => {
+        // console.log(event.target)
+        console.log('clicked btn')
+      }, true);
+    </script>
+    
+  </body>
+</html>

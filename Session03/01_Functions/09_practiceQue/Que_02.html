@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Que_02</title>
+    <style>
+        body {
+            font-size: 30px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Que - 2 Create a function to print greater of three numbers passed in argument</h2>
+    <script>
+        document.write("<h3>(i) Function with argument</h3>")
+        function greater(a, b, c) {
+            a > b ? (a > c ? document.write("<h3>ANS : " + a + " is greatest</h3>") : document.write("<h3>ANS : " + c + " is greatest</h3>")) : (b > c ? document.write("<h3>ANS : " + b + " is greatest</h3>") : (c > a ? document.write("<h3>ANS : " + c + " is greatest</h3>") : document.write("<h3>ANS : All number are equal</h3>")));
+        }
+        greater(56, 56, 56);
+        //============================================================
+
+        document.write("<hr><br><h3>(ii) Anonymous function</h3>")
+        let greater1 = function (a, b, c) {
+            a > b ? (a > c ? document.write("<h3> : " + a + " is greatest</h3>") : document.write("<h3>ANS : " + c + " is greatest</h3>")) : (b > c ? document.write("<h3>ANS : " + b + " is greatest</h3>") : (c > a ? document.write("<h3>ANS : " + c + " is greatest</h3>") : document.write("<h3>ANS : All number are equal</h3>")));
+        }
+        greater1(56, 96, 102);
+        //============================================================
+
+        document.write("<hr><br><h3>(iii) Arrow => function</h3>")
+        let greater2 = (a, b, c) => a > b ? (a > c ? document.write("<h3> : " + a + " is greatest</h3>") : document.write("<h3>ANS : " + c + " is greatest</h3>")) : (b > c ? document.write("<h3>ANS : " + b + " is greatest</h3>") : (c > a ? document.write("<h3>ANS : " + c + " is greatest</h3>") : document.write("<h3>ANS : All number are equal</h3>")));
+        greater2(36, 15, 789);
+
+    </script>
+</body>
+
+</html>

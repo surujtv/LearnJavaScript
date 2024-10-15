@@ -1,0 +1,8 @@
+definition of array in js--->
+
+array is a collection of items that are stored hiteroginious data at contiguous memory locations.
+In javascript, arrays can be declared using the following syntax:
+
+1. var arr = [value1, value2, ...];
+2. let arr = ['apple', 'banana', 'orange'];
+3. const arr = ['carrot', 'potato', 'onion'];

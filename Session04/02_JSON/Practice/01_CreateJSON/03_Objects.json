@@ -1,0 +1,17 @@
+{
+    "name": "Surendra Jatav",
+    "age": "23",
+    "gender": "Male",
+    "skills": ["C", "C++", "HTML", "CSS", "JavaScript"],
+    "address": {
+        "add": "61, Shivbag Colony",
+        "city": "Indore",
+        "state": "Madhya Pradesh",
+        "pincode": 452010,
+        "latlong": {
+            "lat": "13211",
+            "long": "78912"
+        }
+    },
+    "comment" : "This is a sample JSON object."
+}

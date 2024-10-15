@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>DOM MANIPULATION</h1>
+    <div id="Div1">
+      <h1 id="h1">Hello World!</h1>
+    </div>
+
+    <script>
+      // Creating and removing Elements into the DOM.
+
+      // create new div-->
+      let newDiv = document.createElement("div");
+      let newText = document.createTextNode('Hi this is new Div')
+      newDiv.appendChild(newText)
+      console.log(newDiv)
+    //   document.body.prepend(newDiv)  // inserted at the top of body object
+      document.body.append(newDiv)
+
+    </script>
+  </body>
+</html>

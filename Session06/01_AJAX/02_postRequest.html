@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Post Request Using AJAX - </h1>
+    
+    <!-- Button trigger modal -->
+    <button id="btn">Add User</button>
+    <script>
+        document.getElementById('btn').addEventListener("click", function(){
+
+        const  myApi = 'http://localhost:4056/create'   // crud app
+        const jsonApi = 'https://jsonplaceholder.typicode.com/posts'
+        
+        const xhr = new XMLHttpRequest()    // step - 1
+        
+        console.log(xhr)
+        
+        const data =  { // set config data to be sent with POST request
+                "name": "Surendra",
+                "email": "anita@gmail.com",
+                "mobile": 9993945380,
+                "gender": "Male",
+                "address": "Indore MP"
+            }
+
+        xhr.responseType = 'json'
+
+        xhr.onload = function () {  // we are using this for track request-response.
+            if (xhr.response.success) {
+                alert(xhr.response.message) // it will show Pop-Up
+                console.log(xhr.response.data)
+            }else{
+                alert(xhr.response.message)
+                console.log(xhr.response.record)
+            }
+        }
+
+        xhr.open('POST', myApi, true)   // step - 2
+        xhr.setRequestHeader('Content-Type', 'application/json')
+        // NOTE: setRequestHeader must be called after open()
+ 
+        xhr.send(JSON.stringify(data))  // step- 3
+
+    })
+
+    </script>
+</body>
+</html>
+
+

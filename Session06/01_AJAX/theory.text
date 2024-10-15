@@ -1,0 +1,69 @@
+
+What is AJAX - 
+
+AJAX stands for Asynchronous JavaScript And Xml.
+Ajax is a mechanism for making partial page updates. it enables you to update section of a page with data that comes from the server, avoid full page refresh.
+
+Ajax is a web development technique which helps to create highly responsive, near desktop software like user experience web applications.
+
+HTML, CSS for representation, JSON/XML/Text for storing Data, XMLHttpRequest Object for
+action in the background and JavaScript put all this together.
+
+Ajax is used in web pages to be updated asynchronously by exchanging data with a web server behind the scenes. This makes possible to update parts of a web page, without reloading the whole page.
+Using ajax we can create better and faster web applications.
+Ajax is not Programming Language.
+Examples:-
+On Type Search
+Movie Rating Feature
+
+Why use AJAX - 
+• No Page Reload on each request
+• Update a Part page not full page
+• Send Data to server in background
+• Receive Data from server in background
+• Better User experience
+• Improves Speed and Performance
+
+=================================================
+
+What is XMLHttpRequest ?
+XMLHttpRequest (XHR) is an API that can be used by JavaScript, JScript, VBScript, and other web browser scripting languages to transfer and manipulate data to and from a web server using HTTP protocol, establishing an independent connection channel between Client and Server:
+The Data can be Text Data, XML Data and JSON Data.
+
+XMLHttpRequest object ?
+An object of XMLHttpRequest is used for asynchronous communication between client and server.
+It performs following operations:
+Sends data from the client in the background
+Receives the data from the server
+Updates the webpage without reloading it.
+
+syntax- const var_name = new XMLHttpRequest() // returns an object with multiple properties
+
+
+XMLHttpRequest object properties-
+
+
+onreadystatechange - It defines a function to be called when the readyState property changes.
+The onreadystatechange is called multiple times during an XHR request. We explicitly ignore all the states other than readyState === 4, which means that the request is done.
+readyState - This property returns the state an XMLHttpRequest client is in. An XHR client exists in one of the following states:
+
+0 = UNSENT
+1 = OPENED
+2 = HEADERS_RECEIVED
+3 = LOADING
+4 = DONE
+
+.responseType = ''
+.responseText
+.responseXML
+.status - returns the status HTTP codes.
+.upload -file upload
+.open('GET', 'API', true)
+.getResponseHeader('content-type', 'application/json')
+.setRequestHeader('Content-Type', 'application/json')
+.onprogress = function any()
+.onreadystatechange = function any({.readyState})   // handle response
+.onload = function any()    // handle response
+
+
+.send() // at last

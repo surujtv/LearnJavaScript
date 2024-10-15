@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSON</title>
+  </head>
+  <body>
+    <h1>Accessing JSON Data in JavaScript Manually</h1><br>
+
+    <h1>dotNotation (obj.keyName)===================></h1>
+    <div id="jsonContainer">
+
+    </div><br>
+
+    <h1>arrayNotation (obj["keyName"])==============></h1>
+    <div id="jsonContainer1"></div>
+
+
+    <script>
+      let objData = `{
+        "name": "Surendra Jatav",
+        "age": "23",
+        "gender": "Male"
+      }`;
+
+      console.log(objData)  // JSON string
+      
+      // converting JSON data to JS object
+      let jsonData = JSON.parse(objData)
+
+      console.log(jsonData) // JS Object
+      
+      // NOTE: We can access by both Array Notation and dot Notation.
+
+      // dot Notation
+      let Data = `<h1>Name: ${jsonData.name}<h1><h1>Age: ${jsonData.age}<h1><h1>Gender: ${jsonData.gender}<h1>` 
+
+
+      // document.write(Data)
+      document.getElementById('jsonContainer').innerHTML = Data
+
+      // Array Notation
+      let Data1 = `<h1>Name: ${jsonData["name"]}<h1><h1>Age: ${jsonData["age"]}<h1><h1>Gender: ${jsonData["gender"]}<h1>` 
+
+      document.getElementById('jsonContainer1').innerHTML = Data1
+
+    </script>
+  </body>
+</html>

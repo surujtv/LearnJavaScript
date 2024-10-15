@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>POST</title>
+  </head>
+  <body>
+    <h1>POST DATA</h1>
+
+    <script>
+      const url =
+        "http://videhjaiswal.pythonanywhere.com/customer/customer_api/customers/register";
+
+      async function postData() {
+        try {
+          const configrations = {
+            method: "POST",
+            body: JSON.stringify({
+              name: "Sandhya Dwivedi",
+              email: "sandhyajii@gmail.com",
+              password: "123456",
+              gender: "Female",
+              balance: "16515",
+              account_no: "16515115",
+              accounttype: "savings",
+            }),
+            headers: {
+              "Content-Type": "application/json",
+            },
+          };
+
+          const response = await fetch(url, configrations);
+          if (response.ok) {
+            const data = await response.json();
+            alert("User registered");
+          } else {
+            alert("User data not registered");
+          }
+
+          console.log(data);
+        } catch (error) {
+          console.log(error);
+        }
+      }
+
+      postData();
+    </script>
+  </body>
+</html>

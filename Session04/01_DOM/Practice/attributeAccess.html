@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="myDiv">
+        <!-- ids are globally available can be accessed anywhere as an object-->
+        <h1 id="myId" name="surendra" newAttribute="undefined">Surendra</h1>
+    </div>
+
+
+    <script>
+        // access user-define attributes 
+        // let myAttribute = myId.getAttribute("newAttribute");
+        let myAttribute = myId.getAttribute("name");    // returns attribute value
+        console.log(myAttribute)  
+
+        // we can set Attributes
+        myId.setAttribute('new-class', 'superClass');     // sets the attribute "class"
+        console.log(myId.getAttribute("new-class"))
+
+        // check if attribute Exist -->
+        let isExist = myId.hasAttribute('new-class')
+        console.log(isExist)    // true
+
+        // remove attributes -->
+        myId.removeAttribute('new-class')
+        console.log(myId.hasAttribute('new-class')) // false
+
+        // check all attributes-->
+        console.log(myId.attributes)
+
+    </script>
+</body>
+</html>

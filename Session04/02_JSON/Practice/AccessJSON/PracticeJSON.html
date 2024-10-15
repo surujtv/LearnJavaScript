@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON ACCESS</title>
+</head>
+<body>
+    <h1>Access JSON DATA</h1>
+    <div id="DataContainer">
+
+    </div>
+
+    <script>
+        // only single Object-------->
+        
+        // const jsonData = `{
+        //     "name": "John Doe",
+        //     "age": 30,
+        //     "city": "New York"
+        // }`
+
+        // const jsObject = JSON.parse(jsonData)
+
+        // // console.log(jsonData)
+        // document.write("name : " + jsObject.name + '<br>')
+        // document.write("Age : " + jsObject.age)
+
+
+        //====================================================================
+
+
+        // Array Inside Object-------->
+
+        // let  data = `{
+        //     "name": "Surendra Jatav",
+        //     "age": "23",
+        //     "gender": "Male",
+        //     "skills": ["C", "C++", "HTML", "CSS", "JavaScript"]
+        // }`
+
+    
+        // let jsObject = JSON.parse(data)
+
+        // let htmlCode = ''
+        // // console.log(htmlCode)
+
+        // // htmlCode = htmlCode + "surendra"
+        // // console.log(htmlCode)
+
+        // // htmlCode = "Jatav"
+        // // console.log(htmlCode)
+        
+        // for (const key in jsObject) {
+        
+        //     // htmlCode += "<h1>" + key + " : " + jsObject[key] + "<br></h1>"
+            
+
+        //     if(key == "skills"){
+        //         // htmlCode += "<h1>" + key + "</h1>"
+
+        //         for(let value of jsObject[key]) {
+        //             htmlCode += `<h1>${value}<br></h1>`
+        //         }
+                
+        //     }else{
+        //         htmlCode += `<h1>${key} : ${jsObject[key]}<br></h1>`
+        //     }
+        // }
+        
+        // console.log(htmlCode)
+        // document.querySelector('#DataContainer').innerHTML = htmlCode
+
+        //=====================================================================
+
+
+        // 03 - Object Inside Object - 
+
+        // let JSdata = `{ 
+        //     "name": "Surendra Jatav",
+        //     "age": "23",
+        //     "gender": "Male",
+        //     "skills": ["C", "C++", "HTML", "CSS", "JavaScript"],
+        //     "address": {
+        //         "add": "61, Shivbag Colony",
+        //         "city": "Indore",
+        //         "state": "Madhya Pradesh",
+        //         "pincode": 452010,
+        //         "latlong": {
+        //             "lat": "13211",
+        //             "long": "78912"
+        //         }
+        //     }
+        // }`;
+
+        // // converting json string into js object-
+        // const jsObj = JSON.parse(JSdata)
+
+        // console.log(jsObj)
+        
+        // let htmlCode = ''
+
+        // htmlCode += `<h1>Name : ${jsObj.name}</h1>`
+        // htmlCode += `<h1>Age : ${jsObj.age}</h1>`
+        // htmlCode += `<h1>Gender : ${jsObj.gender}</h1>`
+
+        // htmlCode += `<h1>Skills : ${jsObj.skills}</h1>`
+
+        // for(const value of jsObj.skills){
+        //     htmlCode +=  `<h1>${value}</h1>`   
+        // }
+
+        // htmlCode += `<h1>Address : ${jsObj.address.add}</h1>`
+        // htmlCode += `<h1>City : ${jsObj.address.city}</h1>`
+        // htmlCode += `<h1>State : ${jsObj.address.state}</h1>`
+        // htmlCode += `<h1>Pincode : ${jsObj.address.pincode}</h1>`
+        // htmlCode += `<h1>Lat : ${jsObj.address.latlong.lat}</h1>`
+        // htmlCode += `<h1>Long : ${jsObj.address.latlong.long}</h1>`
+
+
+        // document.querySelector('#DataContainer').innerHTML = htmlCode
+
+    </script>
+</body>
+</html>

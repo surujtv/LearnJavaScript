@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>querySelectors</title>
+  </head>
+  <body>
+    <div id="first">
+      <h1 id="heading">Hi name is Surendra Jatav.</h1>
+      <p id="newpara">This is a new Paragraph</p>
+    </div>
+    <div id="second">
+      <h2>This is next Div</h2>
+    </div>
+
+    <ul id="listContainer">
+      <li class="mylists">list 1</li>
+      <li class="mylists">list 2</li>
+      <li class="mylists">list 3</li>
+      <li class="mylists">list 4</li>
+      <li class="mylists">list 5</li>
+    </ul>
+
+    <span>Hello Good Morning !</span>
+
+    <script>
+      //Target elements-->
+
+      // id selector--> Globally accessible
+      let firstDiv = document.getElementById("first");
+      // console.dir(firstDiv)
+      console.log(firstDiv);
+      firstDiv.style.backgroundColor = "black";
+      firstDiv.style.color = "white";
+
+      // class selector-->
+      const myList = document.getElementsByClassName("mylists");
+      console.log(myList);
+      for (let index = 0; index < myList.length; index++) {
+        const element = myList[index];
+        element.style.backgroundColor = "blue";
+        element.style.color = "white";
+      }
+
+      // TagName selector-->
+      let tagName = document.getElementsByTagName("span");
+      console.log(tagName[0]);
+      tagName[0].style.fontSize = "40px";
+
+      //query selectors-->
+
+      //for class
+      let listItemWithClass = document.querySelector(".mylists");
+      console.log(listItemWithClass); // it can only select one element
+
+      let allListItemWithClass = document.querySelectorAll(".mylists");
+      console.log(allListItemWithClass);
+
+      //for id
+      let secondDiv = document.querySelector("#second");
+      console.log(secondDiv);
+      secondDiv.style.backgroundColor = "pink"
+
+      /*
+        NOTE: here is a major diff between querySelectors and getElementBy
+        1- querySelector are static  method, they will return the first element that match with your criteria.
+        2- getElementsBy* methods are dynamic , they will return an array of elements that match with your criteria. these are change at runtime.
+      */
+
+    </script>
+  </body>
+</html>

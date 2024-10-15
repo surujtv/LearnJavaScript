@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Accessing</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>First</td>
+            <td>Second</td>
+            <td>Third</td>
+        </tr>
+        <tr>
+            <td>Fourth</td>
+            <td>Fifth</td>
+            <td>Sixth</td>
+        </tr>
+    </table>
+
+
+    <script>
+        //Table Manipulation-->
+        const tableTag = document.body.children[0]
+        console.log(tableTag) 
+        console.log(tableTag.tBodies) 
+        console.log(tableTag.tBodies[0].rows)
+        console.log(tableTag.tBodies[0].rows[0].cells[1].textContent)
+        // changing selected cell background
+        tableTag.tBodies[0].rows[0].cells[1].style = "background-color: yellow";
+    </script>
+</body>
+</html>

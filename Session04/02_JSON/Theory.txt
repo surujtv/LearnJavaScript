@@ -1,0 +1,77 @@
+---
+    What is JSON?
+    The JavaScript JSON is an acronym of JavaScript Object Notation. It provides a format for storing and transporting data. It is a lightweight human readable collection of data that can be accessed in a logical manner.
+
+    JSON stands for JavaScript Object Notation and it's a lightweight data-interchange format that is easy to read and write for humans.
+
+    JavaScript Object Notation (JSON) is a lightweight, text-based data exchange format that is language-independent (can be use with any programming language). It is used in object-oriented programming to store and communicate data objects between applications.
+    
+    NOTE: it's not a programming language it's just a file formate to store data.
+---
+    Why we use JSON?
+
+    Advantages-->
+    -JSON is a lightweight as compared to XML.
+    -It is easy for humans to read and write. 
+    -It is easy for machines to parse and generate. 
+    -It is based on a subset of the JavaScript Programming Language.
+
+---
+    Formate | Creating JSON-->
+    The two primary parts that make up JSON are keys and values. Together they make a key/value pair.
+    -Key: A key is always a string enclosed in double quote.
+    -Value: A value can be a string, number, boolean expression, array, or object.
+    -Key/Value Pair: A key value pair follows a specific syntax, with the key followed by a colon followed by the value. Key/value pairs are comma separated.
+    Syntax-->
+        {
+            "student": {
+                "name": "sandhya",
+                "age": "24.5",
+                "add": "indore"
+                "skills": ['C', 'C++', 'MERN']
+            }
+        }
+        
+---
+    NOTES: 
+    1. JSON is replacement of XML.
+    2. Keys & values must be double quoted.
+    3. value can be any type of data.
+    4. JSON supports dataStructures such as Array and Objects.
+    5. It can be read and written in any programming language.
+    6. JSON stores data in text format which can easily be transferred over network.
+    7. JSON data parsed into JavaScript Objects using JSON.parse(json_file) method So browser's can easily understand JSON as JavaScript Objects.
+    8. Comments are Not supported in JSON but we can do this by adding a key name as "comment": "write your comments here" this key will treated as a comment in JSON file.  
+    9. Date objects and function are not allowed in JSON.
+    10.If you need to include a date or function, write it as a string. You can convert it back into a date object or function later.
+    11.Browser can't understand JSObject but can read JSON string. 
+
+---
+    Difference between JSON & XML -->
+    JSON is simpler than XML because it has fewer characters and does not require closing tags.
+    In JSON, everything is an object (or a property) and everything is a string. There are no separate types like integers or floats
+    In XML, every element needs to have both opening and closing tag whereas in JSON only need one.
+
+    #Check slide for more Differences.
+
+--- 
+    Similarities between JSON & XML.
+    NOTE: check slide.
+
+---
+    Creating JSON-->
+    -Simple JSON.
+    -Arrays Inside JSON.
+    -Objects Inside JSON.
+    -Nesting of Arrays and Objects in JSON.
+
+---
+    Methods to exchange JSON data on internet -->
+    We have 2 most important methods that we will use while working with JSON-->
+
+    1.  JSON.parse(json_sting) : Parsing a JSON string into JavaScript object.
+        USE: while receiving data from server you will get the response in form of String.
+
+    2.  JSON.stringify(obj)   : Converting JavaScript object into JSON String.
+        USE: while sending data to server you will send the data in form of String.
+

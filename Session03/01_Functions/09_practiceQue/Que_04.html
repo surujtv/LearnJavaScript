@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Que_04</title>
+    <style>
+        body {
+            font-size: 30px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Que - 4 create a function which accepts an array of Int in argument and print sum of all elements</h2>
+    <script>
+        document.write("<h3>(i) Function with argument and return type</h3>")
+        function sum_Array(arr) {
+            let sum = 0;
+            for (let i = 0 ; i<arr.length ; i++){
+                sum += arr[i];
+            }
+            return sum;
+        }
+        let Array = [1,2,3,4,5,6,7,8,9];
+        let sumOfArray = sum_Array(Array);
+        document.write("<h3>Ans : Sum of Array ["+Array+"] is : " +sumOfArray+ "</h3><hr>");
+        //=============================================================================================
+
+        document.write("<h3>(ii) Anonymous Function</h3>")
+        let sum_Array1 = function (arr) {
+            let sum = 0; 
+            for (let index in arr)
+                sum += arr[index];
+            return sum;
+        }
+        let Array1 = [10,20,30,40,50];
+        let sumOfArray1 = sum_Array1(Array1);
+        document.write("<h3>Ans : Sum of Array ["+Array1+"] is : " +sumOfArray1+ "</h3><hr>");
+        //============================================================================================
+
+        document.write("<h3>(iii) Arrow => Function</h3>")
+        let sum_Array2 = (arr) => {
+            let sum = 0; 
+            for (let index of arr)
+                sum += index;
+            return sum;
+        }
+        let Array2 = [100,200,300,400,500];
+        let sumOfArray2 = sum_Array2(Array2);
+        document.write("<h3>Ans : Sum of Array ["+Array2+"] is : " +sumOfArray2+ "</h3><hr>");
+
+        
+
+    </script>
+</body>
+
+</html>

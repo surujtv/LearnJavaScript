@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GetRequest - AJAX</title>
+</head>
+<body>
+    <h1>Hello Sandhya !</h1>
+
+    <button id="btn">Click Me! </button><br/>
+    
+    <div id="result"></div>  
+
+    <!-- Include the script file -->
+    <script>
+        // Add an event listener for the button element
+        
+        document.getElementById("btn").addEventListener('click', function(){ 
+            
+            const url = 'https://jsonplaceholder.typicode.com/users'
+            const slowApi = 'https://httpbin.org/anything'
+
+            // Create a new XMLHttpRequest object
+            const xhr = new XMLHttpRequest()
+            console.log(xhr)
+
+            // parse JSON string into js Object - 
+            xhr.responseType = 'json'   // instead of JSON.parse()
+
+            //add track states of the request - xhr.onreadyStateChange()
+            xhr.onreadystatechange = function () {
+                if (this.readyState ===  4 && this.status == 200) {
+                    console.log(xhr.response)
+                    
+                }else{
+                    console.warn(`Something went wrong: ${this.status}`)
+                }
+            }
+
+
+            //add onload event listener  - .onload  - instead of onreadystatechange
+            xhr.onload = function () {  // we are using this for track request-response.
+                if (xhr.status ===  200) {
+                    console.log(xhr.response)
+                }else{
+                    console.log('Error Occured : '+xhr.response)
+                }
+            }
+            
+            // open request - using xhr.open()
+            // firstParameter - method: GET/POST etc., 
+            // SecondParameter - URL of the server to be requested,  
+            // ThirdParameter - true (asynchronous), false
+            xhr.open('GET', slowApi, true)
+
+            // send request to the browser - Using xhr.send()
+            xhr.send();
+        })
+    </script>
+</body>
+</html>

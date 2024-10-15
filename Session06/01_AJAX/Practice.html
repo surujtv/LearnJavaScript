@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>XMLHttpRequest</title>
+    <style>
+      table {
+        border: 1px solid black;
+        border-collapse: collapse;
+        justify-content: center;
+        margin: 20px;
+        width: 90%;
+      }
+      tr th {
+        padding: 8px;
+        border: 1px solid black;
+      }
+      td {
+        font-size: 16px;
+        border: 1px solid black;
+        text-align: center;
+      }
+      caption {
+        margin-bottom: 20px;
+        width: 18%;
+        text-align: center;
+      }
+      img {
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hello world -</h1>
+    <button id="btn">Button</button><br /><br />
+    <div id="container">
+      <!-- Content will be filled here -->
+    </div>
+    <script>
+      const button = document.querySelector("#btn");
+      button.addEventListener("click", () => {
+        // step -1 create instance of XMLHttpRequest()
+        const xmlRequest = new XMLHttpRequest(); // constructor function -
+
+        console.log(xmlRequest); //0 = UNSENT
+
+        //converting String into Json - // use instead of JSON.parse()
+        xmlRequest.responseType = "json";
+
+        //add track states of the request - xhr.onreadyStateChange()
+        // ye request open hone k bad har bar chalta h jab bhi state change hoti hai.
+        // xmlRequest.onreadystatechange = function(){
+        //     if(this.readyState === 4 && this.status === 200){
+        //         console.log(this.response)
+
+        //         document.getElementById('container').innerHTML = this.response
+        //     }else{
+        //         console.log('Error Occured')
+        //     }
+        // }
+
+        xmlRequest.onload = function () {
+            // we are handling response here-
+          // alternative of onreadystatechange
+          if (this.status === 200) {
+            console.log(this.response);
+            let htmlCode = `<table>
+                                            <tr>
+                                                <th>albumId</th>
+                                                <th>id</th>
+                                                <th>title</th>
+                                                <th>url</th>
+                                                <th>thumbnailUrl</th>
+                                            </tr>`;
+            for (const objects of this.response) {
+              htmlCode += `<tr>
+                            <td>${objects.albumId}</td>
+                            <td>${objects.id}</td>
+                            <td>${objects.title}</td>
+                            <td><img src=${objects.url} alt='no-img'></td>
+                            <td><img src=${objects.thumbnailUrl} alt='no-thumbnail'></td>
+                            </tr>`;
+            }
+
+            htmlCode += `</table>`;
+
+            console.log(htmlCode);
+
+            document.getElementById("container").innerHTML = htmlCode;
+          } else {
+            console.log("Error Occured");
+          }
+        };
+        /*
+                2 = HEADERS_RECEIVED
+                3 = LOADING
+                4 = DONE
+            */
+
+        // step -2 set the request method and URL using - .open()
+        // Parameters - 3
+        // firstParameter - method: GET/POST etc.,
+        // SecondParameter - URL of the server to be requested,
+        // ThirdParameter - true (asynchronous), false
+        xmlRequest.open(
+          "GET",
+          "https://jsonplaceholder.typicode.com/photos",
+          true
+        ); // 1 = OPENED
+
+        // Step - 3 send the HTTP request using - .send()
+        xmlRequest.send();
+      });
+    </script>
+  </body>
+</html>
+
+<!-- 
+    sample - 
+    [ 
+        { 
+            "albumId": 1, 
+            "id": 1, 
+            "title": "accusamus beatae ad facilis cum similique qui sunt", 
+            "url": "https://via.placeholder.com/600/92c952", 
+            "thumbnailUrl": "https://via.placeholder.com/150/92c952" 
+        }
+    ] 
+ -->

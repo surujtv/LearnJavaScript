@@ -1,0 +1,24 @@
+step - 1
+
+create file that export something(Practice.js)
+
+
+step - 2
+
+create file that import that data from Practice.js
+
+step - 3
+link this file(PracticeImport.js) inside index.html 
+and set type = module inside script tag
+
+NOTE: 
+1. agar tumhe html file ka use nahi karna hai to .js file ko change kar sakte ho .mjs file m jisse ki ES6 version enable ho jayega.
+2. Named export m hum multiple exports kar sakte hai.
+3. Jab bhi hum script ka type module set kar dete hai iss file ke sare variables and functions Module scope m avaiable honge na ki gobal scope m.
+4. jab bhi script ka type module set kar dete hai defer keyword activate ho jata hai.
+5. strict mode bhi enable ho jata hai by default
+6. check all requests in network.
+7. imported script file ka code pehle execute hota h.
+
+-Problem - import kiya hua name pehle se file m declare h 
+-solution -hum import karte time variable ka name change kar sakte hai.

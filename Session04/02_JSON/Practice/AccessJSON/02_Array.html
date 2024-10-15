@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArrayJSON</title>
+</head>
+<body>
+    <h1>Accessing JSON Data in JavaScript using loop</h1>
+    <div id="container">
+
+    </div>
+
+    <script>
+        let  data = {
+            "name": "Surendra Jatav",
+            "age": "23",
+            "gender": "Male",
+            "skills": ["C", "C++", "HTML", "CSS", "JavaScript"]
+        }
+        
+        let  output = "";
+        for(i in data){
+            output += "<h1>"+i + ": " + data[i] + "</h1>";
+        }
+
+        document.getElementById("container").innerHTML = output;
+    </script>
+</body>
+</html>

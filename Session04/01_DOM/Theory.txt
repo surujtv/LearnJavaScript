@@ -1,0 +1,79 @@
+1.  What is DOM?
+    DOM stands for Document Object Model.
+    When a web page is loaded, the browser creates a Document Object Model of the page which is formed in a tree structure.
+
+    Every elements in HTML called Node.
+
+    <html></html>   this is called rootElement.
+
+    <head></head> and <body></body>
+    these elements called child elements. 
+
+    NOTE: content inside elements called textNode.
+
+2.  What is document Object?
+    document Object is attached to the Window Object.
+    Window Object is a global Object in browser's. browser's provide this Object by default. We get all nodes in this Object.
+
+3.  Accessing DOM Elements using some Methods.-->
+    document.getElementsById('id_name')
+    document.getElementsByClassName('class_name')
+    document.getElementsByName('Element_name')
+    document.getElementsByTagName('TagName')
+    document.querySelector('.class_name')
+    document.querySelectorAll('.class_name')
+    document.querySelector('#id_name')
+    document.querySelectorAll('#id_name')
+    
+4.  Attribute related functions-->
+    id_name.getAttribute('attribute_name')
+    id_name.setAttribute('attribute_name', 'attribute_value')
+    id_name.removeAttribute('attribute_name')
+
+5.  Manipulating the DOM-->
+    Manipulating the elements of Object tree using JavaScript is called as manipulation of DOM.
+    like - add, remove and modify.
+---
+    Create Node and Insert Node Into the DOM-->
+    let obj = document.createElement('elements_name')
+    document.body.append('obj')
+--- 
+    Create Text Node and Append it into another element-->
+    const newText = document.createTextNode('text-content')
+    obj.appendChild('newText')
+---
+    Replacing existing Node with new Node-->
+    id_name.replaceWith('new_Node')
+---
+    Remove a node from the DOM -->
+    id_name.remove()
+---
+    Insert a whole HTML code into body or a particular Node by targeting their id -->
+    document.body.innerHTML += `<div id="myNewDiv">
+            <h1>WelCome To this DOM.</h1>
+            <p>Hi I am Surendra Jatav</p>
+            <ul>
+                <li>Surendra</li>
+                <li>Jitendra</li>
+                <li>Govind</li>
+                <li>Kaushal</li>
+            </ul>
+        </div>`
+
+    document.getElementById('targetId').innerHTML = 'HTML_Code'
+
+    NOTE: this method is must for JSON practice.
+---
+    Getting Input Values From User -->
+    let input = document.getElementById('id_name').value;
+---
+    Events-->
+
+    There are two types of events in JS which we will discuss here:
+    1) Load event --> It occurs when complete webpage has been loaded including all scripts, stylesheets and images.
+    2) Window Events : These are triggered when something happens on the browser window such as click, scroll etc.
+---
+    target.addEventListener('event_name', callbackFunction)
+---
+    Write Something on DOM-->
+    document.write("text-content");

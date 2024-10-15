@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dialogue-Boxes</title>
+    <style>
+      button {
+        height: 60px;
+        width: 400px;
+        margin: 5px;
+        padding: 10px;
+        font-size: 200%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="font-size: 3em">Dialogue-Boxes in JavaScript</h1>
+    <br />
+    <hr />
+    <button onclick="alertBox()">Alert Box</button><br />
+    <hr />
+    <button onclick="confirmBox()">Confirm Box</button><br />
+    <hr />
+    <button onclick="promptBox()">Prompt Box</button><br />
+    <hr />
+
+    <script>
+      function alertBox() {
+        const alertResult = alert(
+          "Koi bhi message pass kr sakte hai ye bas alert show krvata hai.."
+        );
+        console.log("Alert-Result : " + alertResult); // returns undefined
+      }
+      function confirmBox() {
+        const confirmResult = confirm("confirmation k liye use karte hai..");
+        console.log("Confirm-Result : " + confirmResult); // returns true or false
+      }
+      function promptBox() {
+        const promptValue = prompt(
+          "Koi value enter karo, user input k liye use karte hai..."
+        );
+        console.log("Prompt-Value : " + promptValue);
+      }
+    </script>
+  </body>
+</html>

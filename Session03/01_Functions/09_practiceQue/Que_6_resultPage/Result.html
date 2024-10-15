@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Result</title>
+    <script src="Result.js"></script>
+    <link rel="stylesheet" href="Result.css">
+</head>
+<body>
+    <h2 style="font-size: 40px; margin: 20px;">Que - Check Result using function</h2>
+    <div class="parent">
+        <div class="container">
+            <h3>Enter Marks</h3><table>
+            <form action="#MERN.html"><tr>
+                <td><span>Math</span></td>
+                <td><input type="text" id="math" class="input" placeholder="Enter Math marks"><br></td>
+            </tr>
+            <tr>
+                <td><span>Physics</span></td>
+                <td><input type="text" id="phys" class="input" placeholder="Enter Physics marks"><br></td>
+            </tr>
+            <tr>
+                <td><span>Chemistry</span></td>
+                <td><input type="text" id="chem" class="input" placeholder="Enter Chemistry marks"><br></td>
+            </tr>
+            <tr>
+                <td><span>Hindi</span></td>
+                <td><input type="text" id="hindi" class="input" placeholder="Enter Hindi marks"><br></td>
+            </tr>
+            <tr>
+                <td><span>English</span></td>
+                <td><input type="text" id="eng" class="input" placeholder="Enter English marks"><br></td>
+            </tr></table>
+            <span style="font-size: 30px;">Click on  button to Check Result</span><br>
+                <button type="button" id="sqr" onclick="sqra()">Click here</button>
+                <button type="reset" id="sqr">Reset</button>
+            </form>
+        </div>
+        <div class="container">
+            <h2 style="font-size: 40px;">Answer | Output</h2>
+            <h2 style="font-size: 50px;" id="ans"></h2>
+            <h2 style="font-size: 50px;" id="ans1"></h2>
+            <span style="font-size: 40px;" id="grade"></span>
+            <span id="alert"></span>
+        </div>
+    </div>
+</body>
+</html>
