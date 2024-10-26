@@ -85,10 +85,11 @@
 07. public & private properties inside classes 
 08. getters and setters inside classes. 
 
-# Session12---> Advance Topic - Pending
-01. currying
-02. debouncing
-03. memoization
-04. throttling
+# Session12---> Local Storage
+1. get item from local storage
+2. set item in local storage
 
-# Session13---> Interview Practice Question (technical)
+
+# Advance Topic - Pending
+1. You don't know for loop yet
+2. Conditional statements
